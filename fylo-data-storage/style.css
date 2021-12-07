@@ -91,3 +91,93 @@ body{
     display: flex;
     justify-content: space-between;
 }
+
+.range-indicator-container{
+    background-color: var(--very-dark-blue);
+    border-radius: 20px;
+    height: 20px;
+    margin: 12px 0;
+}
+
+.range-indicator{
+    background: linear-gradient(to right, hsl(6, 100%, 80%) ,hsl(335, 100%, 65%));
+    border-radius: 20px;
+    height: 16px;
+    margin: 2px;
+    width: 81.5%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.range-point{
+    background-color: var(--pale-blue);
+    border-radius: 20px;
+    height: 14px;
+    margin: 1px;
+    width: 14px;
+}
+
+.details-remaining{
+    align-items: center;
+    background: var(--pale-blue);
+    border-radius: 4px;
+    color: var(--very-dark-blue);
+    display: flex;
+    gap: 4px;
+    justify-content: flex-end;
+    padding: 18px;
+    position: relative;
+    max-width: 175px;
+}
+
+.details-remaining span{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.details-remaining:before{
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid var(--pale-blue);
+    border-top: 10px solid var(--pale-blue);
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: 63px;
+}
+
+.details-remaining{
+    align-self: flex-end;
+    top: 24px;
+    right: 24px;
+}
+
+@media screen and (max-width: 650px){
+    .card{ 
+        align-items: stretch;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+    }
+
+    .container{
+        background: url("./images/bg-desktop.png") no-repeat;
+        background-size: cover;
+        justify-items: stretch;
+    }
+
+    .details-wrapper{
+        position: relative;
+        flex-direction: column-reverse;
+    }
+
+    .details-remaining{
+        align-self: center;
+        position: absolute;
+        right: 162px;
+        top: 178px;
+    }
+
+    .details-remaining:before{
+        display: none;
+    }
+}
