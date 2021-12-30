@@ -1,6 +1,9 @@
 import './App.css';
+import DemoForm from './components/DemoForm';
+// import StyleSheets from './components/StyleSheets';
+// import PersonList from './components/PersonList';
 // import ParentComponent from './components/ParentComponent';
-import UserGreeting from './components/UserGreeting';
+// import UserGreeting from './components/UserGreeting';
 // import EventBind from './components/EventBind';
 // import Counter from './components/Counter';
 //import JsxEx from './components/JsxEx';
@@ -23,7 +26,10 @@ function App() {
       {/* <Counter /> */}
       {/* <EventBind /> */}
       {/* <ParentComponent /> */}
-      <UserGreeting />
+      {/* <UserGreeting /> */}
+      {/* <PersonList /> */}
+      {/* <StyleSheets /> */}
+      <DemoForm />
     </div>
   );
 }
