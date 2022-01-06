@@ -1,16 +1,18 @@
+import React from 'react'
 import './App.css';
-// import HookCounter2 from './components/HookCounter2';
-import HookCounter4 from './components/HookCounter4';
-// import ClassCounter from './components/ClassCounter';
-// import HookCounter from './components/HookCounter';
+import GrandParent from './components/GrandParent';
+
+export const UserContext = React.createContext()
+export const ChannelContext = React.createContext()
 
 function App() {
   return (
     <div className="App">
-      {/* <ClassCounter />
-      <HookCounter /> */}
-      {/* <HookCounter2 /> */}
-      <HookCounter4 />
+      <UserContext.Provider value='Nabendu'>
+        <ChannelContext.Provider value='TWD'>
+          <GrandParent />
+        </ChannelContext.Provider>
+      </UserContext.Provider>
     </div>
   );
 }
